@@ -8,7 +8,7 @@ import glob from "glob";
 
 const postsDirectory = join(process.cwd(), "_posts");
 
-const slugMappingJSONPath = join(process.cwd(), ".slug-mapping.json");
+const slugMappingJSONPath = join(process.cwd(), ".next/_slug-mapping.json");
 
 let slugMapping: Record<string, string> = {};
 
