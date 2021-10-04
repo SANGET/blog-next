@@ -225,6 +225,13 @@
   dependencies:
     classnames "*"
 
+"@types/fs-extra@^9.0.13":
+  version "9.0.13"
+  resolved "https://registry.nlark.com/@types/fs-extra/download/@types/fs-extra-9.0.13.tgz#7594fbae04fe7f1918ce8b3d213f74ff44ac1f45"
+  integrity sha1-dZT7rgT+fxkYzos9IT90/0SsH0U=
+  dependencies:
+    "@types/node" "*"
+
 "@types/glob@^7.1.4":
   version "7.1.4"
   resolved "https://registry.nlark.com/@types/glob/download/@types/glob-7.1.4.tgz?cache=0&sync_timestamp=1629707996938&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40types%2Fglob%2Fdownload%2F%40types%2Fglob-7.1.4.tgz#ea59e21d2ee5c517914cb4bc8e4153b99e566672"
