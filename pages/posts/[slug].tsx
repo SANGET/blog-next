@@ -2,6 +2,7 @@ import { useRouter } from "next/router";
 import ErrorPage from "next/error";
 import Head from "next/head";
 import Container from "@/components/container";
+import Content from "@/components/content";
 import PostBody from "@/components/post-body";
 import Header from "@/components/header";
 import PostHeader from "@/components/post-header";
@@ -19,16 +20,13 @@ export default function Post({ post }) {
   return (
     <Layout>
       <Container>
-        <Header />
         {router.isFallback ? (
           <PostTitle>Loading…</PostTitle>
         ) : (
-          <>
-            <article className="mb-32">
+          <Content>
+            <article className="mb-32 markdown-body">
               <Head>
-                <title>
-                  {post.title} | Next.js Blog Example with {CMS_NAME}
-                </title>
+                <title>{post.title}</title>
               </Head>
               <PostHeader
                 title={post.title}
@@ -38,7 +36,7 @@ export default function Post({ post }) {
               />
               <PostBody content={post.content} />
             </article>
-          </>
+          </Content>
         )}
       </Container>
     </Layout>

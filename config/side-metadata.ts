@@ -15,7 +15,7 @@ const sideMetadata = {
   pagesContentPath: `${__dirname}/content/pages`,
   basePath: "/",
   author: "Alex Chueng",
-  siteTitle: `Alex Chueng's blogs`,
+  siteTitle: `Alex's blogs`,
   description: "Bring yourself back online.",
   siteUrl: "https://thinkmore.xyz",
   social: {

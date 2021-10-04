@@ -2,7 +2,6 @@ import Head from "next/head";
 import Container from "@/components/container";
 import MoreStories from "@/components/more-stories";
 import HeroPost from "@/components/hero-post";
-import Header from "@/components/header";
 import Intro from "@/components/intro";
 import Layout from "@/components/layout";
 import PostList from "@/components/post-list";
@@ -16,9 +15,8 @@ export default function Index({ allPosts }) {
         <Head>
           <title>{sideMetadata.siteTitle}</title>
         </Head>
-        <Header />
         <Container>
-          <Intro />
+          {/* <Intro /> */}
           <PostList data={allPosts} />
         </Container>
       </Layout>

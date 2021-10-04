@@ -3,9 +3,9 @@ import sideMetadata from "../config/side-metadata";
 
 export default function Intro() {
   return (
-    <section className="flex-col md:flex-row flex items-center md:justify-between mt-16 mb-16 md:mb-12">
-      <div>{sideMetadata.siteTitle}</div>
-      <div>{sideMetadata.description}</div>
+    <section className="container mx-auto max-w-2xl flex-col md:flex-row flex items-center md:justify-between mt-16 mb-16 md:mb-12">
+      <div className="text-2xl text-gray-400">{sideMetadata.siteTitle}</div>
+      <div className="text-xl text-gray-200">{sideMetadata.description}</div>
     </section>
   );
 }

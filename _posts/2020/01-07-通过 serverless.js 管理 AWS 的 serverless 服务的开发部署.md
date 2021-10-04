@@ -31,7 +31,7 @@ tags:
 
 参考 AWS 官方教程，跟着完成它可以对 AWS 提供的各种服务有大致了解，包括 AWS 各个服务之间是如何合作的，以及 AWS 对 serverless 的定义。
 
-![web services structure](../../assets/images/serverless/aws_services.png)
+![web services structure](/assets/images/serverless/aws_services.png)
 
 > 亚马逊的基础设施做的相当好。
 
@@ -51,11 +51,11 @@ tags:
 
 在 serverless.com 添加一个 serverless app
 
-![web services structure](../../assets/images/serverless/serverless_add_app.png)
+![web services structure](/assets/images/serverless/serverless_add_app.png)
 
 然后进入该 app，跟着详细步骤操作
 
-![web services structure](../../assets/images/serverless/create_service.png)
+![web services structure](/assets/images/serverless/create_service.png)
 
 然后得到一个基础的 serverless 项目
 

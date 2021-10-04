@@ -1,26 +1,32 @@
 import React from "react";
 import Link from "next/link";
+import dayjs from "dayjs";
+import Content from "./content";
 
 interface Props {
   data: any[];
 }
 
 export default function PostBody({ data }: Props) {
-  let perYear = "";
+  let perYear = 0;
   return (
-    <div className="max-w-2xl mx-auto">
+    <Content>
       <div className="archive-page">
         {data.map(({ title, date, author, slug }) => {
-          const currYear = date.split(", ")[1];
+          const currYear = dayjs(date).year();
           let yearTip;
           if (perYear !== currYear) {
-            yearTip = <h3 className="archive-year">@{currYear}</h3>;
+            yearTip = (
+              <div className="archive-year text-xl text-gray-400 mt-12 mb-1">
+                @{currYear}
+              </div>
+            );
             perYear = currYear;
           }
           return (
             <div key={`/${slug}`} className="archive-item">
               {yearTip}
-              <div className="item">
+              <div className="item cursor-pointer py-1 text-gray-600 hover:text-gray-900">
                 <Link as={`/posts/${slug}`} href={`/posts/${slug}`}>
                   <span>
                     {title} - <span className="date">{date}</span>
@@ -31,6 +37,7 @@ export default function PostBody({ data }: Props) {
           );
         })}
       </div>
-    </div>
+      <div className="tip text-gray-300 py-4">{data.length} posts</div>
+    </Content>
   );
 }
