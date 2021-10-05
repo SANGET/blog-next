@@ -9,34 +9,42 @@ import PostHeader from "@/components/post-header";
 import Layout from "@/components/layout";
 import { getPostBySlug, getAllPosts } from "@/lib/api";
 import PostTitle from "@/components/post-title";
-import { CMS_NAME } from "@/lib/constants";
 import markdownToHtml from "@/lib/markdownToHtml";
+import PageLayout from "@/components/pageLayout";
+
+const PostLayoutMap = {
+  page: PageLayout,
+};
 
 export default function Post({ post }) {
   const router = useRouter();
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />;
   }
+  const pageLayout = post.layout;
+  const PickPageLayout = PostLayoutMap[pageLayout] || PageLayout;
+
   return (
     <Layout>
       <Container>
         {router.isFallback ? (
           <PostTitle>Loading…</PostTitle>
         ) : (
-          <Content>
-            <article className="mb-32 markdown-body">
-              <Head>
-                <title>{post.title}</title>
-              </Head>
-              <PostHeader
-                title={post.title}
-                coverImage={post.coverImage}
-                date={post.date}
-                author={post.author}
-              />
-              <PostBody content={post.content} />
-            </article>
-          </Content>
+          <PickPageLayout post={post} />
+          // <Content>
+          //   <article className="mb-32 markdown-body">
+          //     <Head>
+          //       <title>{post.title}</title>
+          //     </Head>
+          //     <PostHeader
+          //       title={post.title}
+          //       coverImage={post.coverImage}
+          //       date={post.date}
+          //       author={post.author}
+          //     />
+          //     <PostBody content={post.content} />
+          //   </article>
+          // </Content>
         )}
       </Container>
     </Layout>
@@ -49,10 +57,12 @@ export async function getStaticProps({ params }) {
     "date",
     "slug",
     "author",
+    "layout",
     "content",
     "ogImage",
     "coverImage",
   ]);
+
   const content = post ? await markdownToHtml(post.content || "") : "";
 
   return {

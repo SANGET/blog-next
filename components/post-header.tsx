@@ -5,7 +5,7 @@ import PostTitle from "../components/post-title";
 
 export default function PostHeader({ title, coverImage, date, author }) {
   return (
-    <div className="pt-8">
+    <div className="pt-8 no-print">
       <h1
         className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tighter leading-tight md:leading-none my-12 text-center md:text-left"
         style={{ paddingBottom: 16 }}

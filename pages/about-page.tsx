@@ -54,7 +54,7 @@ export default function About() {
         <div>
           我的
           <ul className="list-none">
-            <Link href={`/reading`}>
+            <Link href={`/posts/read-list`}>
               <li>reading list</li>
             </Link>
             <Link href={`/resume`}>

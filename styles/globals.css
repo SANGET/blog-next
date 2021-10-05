@@ -43,3 +43,10 @@ ol, ul {
   display: block;
   background-color: #eee;
 }
+
+@media print {
+  .no-print,
+  .no-print * {
+    display: none !important;
+  }
+}
