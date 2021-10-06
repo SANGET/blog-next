@@ -31,8 +31,11 @@ export async function getStaticProps() {
     "slug",
     "author",
     "coverImage",
+    "ignore",
     "excerpt",
-  ]);
+  ]).filter((item) => {
+    return !item.ignore;
+  });
 
   return {
     props: { allPosts },

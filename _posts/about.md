@@ -1,6 +1,7 @@
 ---
 title: 关于
 layout: page
+ignore: true
 ---
 
 <!-- > 分享技术，记录个人经历，探索技术的价值。 -->
@@ -30,7 +31,7 @@ Alex Chueng，90 后，低调务实，喜欢喝早茶。喜欢 `Coding`、`吉�
 
 ## RESOURCES
 
-- [Reading list](/read-list)
-- [Resume](/resume)
+- [Reading list](/posts/read-list)
+- [Resume](/posts/resume)
 
 Thanks

@@ -9,9 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "axios": "^0.22.0",
     "classnames": "2.2.6",
     "date-fns": "2.16.1",
     "dayjs": "^1.10.7",
+    "fingerprintjs2": "^2.1.4",
     "fs-extra": "^10.0.0",
     "gray-matter": "4.0.2",
     "next": "11.1.2",

@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Alex's Resume
+ignore: true
 ---
 
 <escape>
