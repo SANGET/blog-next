@@ -1,6 +1,7 @@
 import { initRequest } from "@/services/req";
 import { useEffect, useState } from "react";
 import "../styles/globals.css";
+import "../styles/style.scss";
 
 function MyApp({ Component, pageProps }) {
   const [isReady, setIsReady] = useState(false);

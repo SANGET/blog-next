@@ -6,6 +6,9 @@ ignore: true
 
 <escape>
   <div class="no-print simple-nav">
+    <div class="side-desc">
+      RESUME
+    </div>
     <a href="/resume_en" class="mr20">English version</a>
     <a href="https://cdn.jsdelivr.net/gh/SANGET/resource@master/files/resume.pdf">PDF简历下载</a>
     <hr />

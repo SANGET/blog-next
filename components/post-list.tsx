@@ -17,7 +17,7 @@ export default function PostBody({ data }: Props) {
           let yearTip;
           if (perYear !== currYear) {
             yearTip = (
-              <div className="archive-year text-xl text-gray-400 mt-12 mb-1">
+              <div className="archive-year text-xl text-gray-400 mt-12 mb-4">
                 @{currYear}
               </div>
             );
@@ -25,11 +25,12 @@ export default function PostBody({ data }: Props) {
           }
           return (
             <div key={`/${slug}`} className="archive-item">
-              {yearTip}
-              <div className="item cursor-pointer py-1 text-gray-600 hover:text-gray-900">
+              <div className="timeline">{yearTip}</div>
+              <div className={`item cursor-pointer py-4 text-gray-600`}>
                 <Link as={`/posts/${slug}`} href={`/posts/${slug}`}>
                   <span>
-                    {title} - <span className="date">{date}</span>
+                    <span className="text">{title}</span> -{" "}
+                    <span className="date">{date}</span>
                   </span>
                 </Link>
               </div>
