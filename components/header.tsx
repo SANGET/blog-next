@@ -22,6 +22,7 @@ export default function Header() {
           <a
             href={sideMetadata.social.github}
             target="_blank"
+            rel="noopener noreferrer"
             className="px-4 py-4 text-gray-500 hover:bg-gray-100"
           >
             <GoOctoface style={{ height: 24, fontSize: 16 }} />

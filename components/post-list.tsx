@@ -26,14 +26,14 @@ export default function PostBody({ data }: Props) {
           return (
             <div key={`/${slug}`} className="archive-item">
               <div className="timeline">{yearTip}</div>
-              <div className={`item cursor-pointer py-4 text-gray-600`}>
-                <Link as={`/posts/${slug}`} href={`/posts/${slug}`}>
+              <Link as={`/posts/${slug}`} href={`/posts/${slug}`} passHref>
+                <div className={`item cursor-pointer py-4 text-gray-600`}>
                   <span>
                     <span className="text">{title}</span> -{" "}
                     <span className="date">{date}</span>
                   </span>
-                </Link>
-              </div>
+                </div>
+              </Link>
             </div>
           );
         })}
