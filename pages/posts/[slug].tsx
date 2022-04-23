@@ -17,6 +17,8 @@ export default function Post({ post }) {
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />;
   }
+  // console.log("post :>> ", post);
+  const { comment = true } = post;
   const pageLayout = post.layout;
   const PickPageLayout = PostLayoutMap[pageLayout] || PageLayout;
 
@@ -42,7 +44,7 @@ export default function Post({ post }) {
           //   </article>
           // </Content>
         )}
-        <Comment />
+        {comment && <Comment />}
       </Container>
     </Layout>
   );
@@ -57,6 +59,7 @@ export async function getStaticProps({ params }) {
     "layout",
     "content",
     "ogImage",
+    "comment",
     "coverImage",
   ]);
 
@@ -80,6 +83,7 @@ export async function getStaticPaths() {
       return {
         params: {
           slug: post.slug,
+          comment: post.comment,
         },
       };
     }),

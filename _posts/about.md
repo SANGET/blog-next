@@ -2,6 +2,7 @@
 title: 关于
 layout: page
 ignore: true
+comment: false
 ---
 
 <!-- > 分享技术，记录个人经历，探索技术的价值。 -->

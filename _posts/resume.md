@@ -2,6 +2,7 @@
 layout: page
 title: Alex's Resume
 ignore: true
+comment: false
 ---
 
 <escape>
