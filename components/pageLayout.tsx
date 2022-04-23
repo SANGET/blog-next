@@ -48,7 +48,7 @@ export default function PageLayout({ post }) {
 
   return (
     <Content>
-      <article className="mb-32 markdown-body">
+      <article className="mb-16 markdown-body">
         <Head>
           <title>{post.title}</title>
         </Head>

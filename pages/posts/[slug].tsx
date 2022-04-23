@@ -1,16 +1,12 @@
 import { useRouter } from "next/router";
 import ErrorPage from "next/error";
-import Head from "next/head";
 import Container from "@/components/container";
-import Content from "@/components/content";
-import PostBody from "@/components/post-body";
-import Header from "@/components/header";
-import PostHeader from "@/components/post-header";
 import Layout from "@/components/layout";
 import { getPostBySlug, getAllPosts } from "@/lib/api";
 import PostTitle from "@/components/post-title";
 import markdownToHtml from "@/lib/markdownToHtml";
 import PageLayout from "@/components/pageLayout";
+import Comment from "@/components/comment";
 
 const PostLayoutMap = {
   page: PageLayout,
@@ -46,6 +42,7 @@ export default function Post({ post }) {
           //   </article>
           // </Content>
         )}
+        <Comment />
       </Container>
     </Layout>
   );
