@@ -36,7 +36,7 @@ export default function PageLayout({ post }) {
         GetVisitorsByTitles(title),
         GetLikeByTitles(title, true),
       ]).then(([visitorRes, likeRes]) => {
-        console.log("likeRes :>> ", likeRes);
+        // console.log("likeRes :>> ", likeRes);
         setBlogInfp({
           visitor: visitorRes.counter[0],
           liker: likeRes.counter,

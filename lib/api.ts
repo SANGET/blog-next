@@ -28,11 +28,6 @@ function setSlugMapping(slug: string, filepath: string) {
   fs.writeFileSync(slugMappingJSONPath, JSON.stringify(slugMapping));
 }
 
-interface SlugRes {
-  slug: string;
-  filepath: string;
-}
-
 const timeRegExp =
   /(((19[2-9]\d{1})|(20\d{2}))-)?((0?[1-9])|(1[0-2]))-((0?[1-9])|([1-2][0-9])|30|31)-/;
 export function getPostSlugs(): string[] {

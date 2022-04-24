@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import dayjs from "dayjs";
+import base64 from "base64-js";
 import Content from "./content";
 
 interface Props {
@@ -24,9 +25,15 @@ export default function PostBody({ data }: Props) {
             perYear = currYear;
           }
           return (
-            <div key={`/${slug}`} className="archive-item">
+            <div
+              key={`/${slug}`}
+              className="archive-item"
+              onClick={() => {
+                // console.log(`/posts/${encodeURIComponent(slug)}`);
+              }}
+            >
               <div className="timeline">{yearTip}</div>
-              <Link as={`/posts/${slug}`} href={`/posts/${slug}`} passHref>
+              <Link href={`/posts/${encodeURIComponent(slug)}`} passHref>
                 <div className={`item cursor-pointer py-4 text-gray-600`}>
                   <span>
                     <span className="text">{title}</span> -{" "}

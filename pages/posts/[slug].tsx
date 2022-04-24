@@ -83,7 +83,6 @@ export async function getStaticPaths() {
       return {
         params: {
           slug: post.slug,
-          comment: post.comment,
         },
       };
     }),
