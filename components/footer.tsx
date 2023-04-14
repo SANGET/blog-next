@@ -1,6 +1,7 @@
 import sideMetadata from "@/config/side-metadata";
 import { HiOutlineMailOpen } from "react-icons/hi";
 import Container from "./container";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -10,9 +11,9 @@ export default function Footer() {
           <span>
             ©{new Date().getFullYear()} {sideMetadata.author}
           </span>
-          <a href={`mailto:${sideMetadata.social.mail}`} className="">
+          <Link href={`mailto:${sideMetadata.social.mail}`} className="">
             <HiOutlineMailOpen style={{ fontSize: 18 }} />
-          </a>
+          </Link>
         </div>
       </Container>
     </footer>

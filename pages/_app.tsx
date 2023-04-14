@@ -28,6 +28,7 @@ function MyApp({ Component, pageProps }) {
           gtag('config', 'UA-125030746-1');
         `}
       </Script>
+      {/* <Component {...pageProps} /> */}
       {isReady ? <Component {...pageProps} /> : <div></div>}
     </>
   );

@@ -4,7 +4,7 @@ import { getClientFingerprint } from "@/utils/get-fingerprint";
 let $R: AxiosInstance | null;
 
 export const initRequest = async (baseUrl: string) => {
-  const fingerprint = await getClientFingerprint();
+  const fingerprint = (await getClientFingerprint()) as any;
   if ($R) return;
   $R = axios.create({
     baseURL: baseUrl,
