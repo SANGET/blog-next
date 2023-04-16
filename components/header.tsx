@@ -23,11 +23,12 @@ export default function Header() {
           {/* <div className="px-4 py-4 text-gray-500 hover:bg-gray-100">Tags</div> */}
           <Link
             href={sideMetadata.social.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-4 py-4 text-gray-500 hover:bg-gray-100"
+            // target="_blank"
+            passHref={true}
           >
-            <GoOctoface style={{ height: 24, fontSize: 16 }} />
+            <div className="px-4 py-4 text-gray-500 hover:bg-gray-100">
+              <GoOctoface style={{ height: 24, fontSize: 16 }} />
+            </div>
           </Link>
         </div>
       </Container>

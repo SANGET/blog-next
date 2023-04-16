@@ -11,7 +11,7 @@ export default function Footer() {
           <span>
             ©{new Date().getFullYear()} {sideMetadata.author}
           </span>
-          <Link href={`mailto:${sideMetadata.social.mail}`} className="">
+          <Link href={`mailto:${sideMetadata.social.mail}`}>
             <HiOutlineMailOpen style={{ fontSize: 18 }} />
           </Link>
         </div>
